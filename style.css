@@ -1,7 +1,7 @@
-.header { grid-area: header; }
+header { grid-area: header; }
 .menu { grid-area: menu; }
 .main { grid-area: main; }
-.footer { grid-area: footer; }
+footer { grid-area: footer; }
 
 .grid-container {
   display: grid;
@@ -9,13 +9,13 @@
     'header header header header header header'
     'menu main main main main main'
     'footer footer footer footer footer footer';
-  grid-gap: 10px;
+  grid-gap: 5px;
   background-color:#FFFFFF;
   padding: 10px;
   color: #FFFFFF;
 }
 
-.grid-container > div, header {
+.grid-container > .main, .menu, header, footer {
   background-color: #006575;
   text-align: center;
   padding: 20px 0;
@@ -35,4 +35,32 @@ header {
     width: 33%;
     text-decoration: none;
     font-size: 17px;
+  }
+
+#flights-list {
+    list-style: none;
+    overflow: hidden;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+.flight-listing {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.flight-listing > div {
+        float: left;
+        color: black;
+        background-color: #f2f2f2;
+        text-align: center;
+        height: 75px;
+        width:33%;
+        text-decoration: none;
+}
+
+footer {
+    display: block;
+    font-size: small;
+    text-align: center;
+    color: white;
   }
