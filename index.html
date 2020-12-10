@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     <title>Flights</title>
     <link rel="stylesheet" href="style.css" />
@@ -8,7 +8,13 @@
 
 <body>
     <div class="grid-container">
-        <div class="header">Header</div>
+        <header class="header">
+            <div class="topnav">
+                <div>Logo</div>
+                <div>Arriving</div>
+                <div>Departing</div>
+              </div>
+        </header>
         <div class="menu">
             <div>
                 <label for="Country">Country:</label>
@@ -33,7 +39,7 @@
             </div>
             <div>
                 <label for="Origin">Origin:</label>
-                <input type="text" id="Origin"/>
+                <input type="text" id="Origin" />
             </div>
             <div>
                 <label for="Destination">Destination:</label>
@@ -41,7 +47,7 @@
             </div>
             <div>
                 <label for="Date">Travel Date</label>
-                <input type="date" id="Date"/>
+                <input type="date" id="Date" />
             </div>
             <button>Submit</button>
         </div>
