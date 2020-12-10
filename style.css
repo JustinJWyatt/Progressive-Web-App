@@ -37,21 +37,13 @@ header {
     font-size: 17px;
   }
 
-#flights-list {
-    list-style: none;
-    overflow: hidden;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-}
-.flight-listing {
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    margin-bottom: 1.5rem;
+#flights-list > .flight-listing {
+    margin-bottom: 10px;
+    display: block;
 }
 .flight-listing > div {
         float: left;
         color: black;
-        background-color: #f2f2f2;
         text-align: center;
         height: 75px;
         width:33%;
