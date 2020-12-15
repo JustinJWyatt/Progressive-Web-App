@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
     <title>Flights</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,17 +17,17 @@
             </div>
             <div class="row col-sm-10 col-md-8 align-items-center">
                 <div class="col-5">
-                        <h5 class="font-weight-bold font-italic mb-0">DEPARTING</h2>
+                    <h5 class="font-weight-bold font-italic mb-0">DEPARTING</h2>
                         <h5 class="city">Tulsa, OK</h4>
-                        <h4 class="float-left">55°</h4>
-                        <img src="assets/images/sunny.png" alt="sunny" class="img-fluid">
+                            <h4 class="float-left">55°</h4>
+                            <img src="assets/images/sunny.png" alt="sunny" class="img-fluid">
                 </div>
 
                 <div class="col-5">
-                        <h5 class="font-weight-bold font-italic mb-0">ARRIVING</h2>
+                    <h5 class="font-weight-bold font-italic mb-0">ARRIVING</h2>
                         <h5 class="city">Albuquerque, NM</h4>
-                        <h4 class="float-left">36°</h4>
-                        <img src="assets/images/tstorm.png" alt="thunderstorms" class="img-fluid">
+                            <h4 class="float-left">36°</h4>
+                            <img src="assets/images/tstorm.png" alt="thunderstorms" class="img-fluid">
                 </div>
 
                 <div class="col-2">
@@ -60,27 +62,17 @@
                 </div>
                 <div class="row pr-1 py-3 justify-content-end">
                     <label class="pr-1" for="Origin">Origin:</label>
-                    <!-- <input class="col-7" type="text" id="Origin" /> -->
+                    <input class="col-7" type="text" id="Origin" />
                     <div class="container" style="padding:50px 250px;">
-                        <form role="form">
-                            <div class="form-group">
-                              <input type="input" class="form-control input-lg" id="txt-search-origin" placeholder="Search by city, or airport code.">
-                            </div>
-                        </form>
                         <div id="filter-records"></div>
-                      </div>
+                    </div>
                 </div>
                 <div class="row pr-1 py-3 justify-content-end">
                     <label class="pr-1" for="Destination">Destination:</label>
-                    <!-- <input class="col-7" type="text" id="Destination" /> -->
+                    <input class="col-7" type="text" id="Destination" />
                     <div class="container" style="padding:50px 250px;">
-                        <form role="form">
-                            <div class="form-group">
-                              <input type="input" class="form-control input-lg" id="txt-search-destination" placeholder="Search by city, or airport code.">
-                            </div>
-                        </form>
                         <div id="filter-records"></div>
-                      </div>
+                    </div>
                 </div>
                 <div class="row pr-1 py-3 justify-content-end">
                     <label class="pr-1" for="Date">Travel Date:</label>
@@ -95,40 +87,65 @@
                 <ul class="flights-list list-group mt-1" id="flights-list">
                     <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
                     </li>
                     <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
-                    </li>                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
+                    </li>
+                    <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
-                        <div class="arrival-data col-5"><div class="arrival-data-content">Test Arrival</div></div>
+                        <div class="arrival-data col-5">
+                            <div class="arrival-data-content">Test Arrival</div>
+                        </div>
                         <div class="price-data col-2">Price</div>
                     </li>
                 </ul>
@@ -138,10 +155,16 @@
         <footer class="footer row"><small>Copywrite 2020 J.Wyatt, C.Trachte, A.Declue</small></footer>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<script src="assets/data/airports.js"></script>
 <script src="helpers/jsonDataSearch.js"></script>
 
 </html>
