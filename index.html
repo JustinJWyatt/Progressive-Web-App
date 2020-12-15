@@ -60,11 +60,27 @@
                 </div>
                 <div class="row pr-1 py-3 justify-content-end">
                     <label class="pr-1" for="Origin">Origin:</label>
-                    <input class="col-7" type="text" id="Origin" />
+                    <!-- <input class="col-7" type="text" id="Origin" /> -->
+                    <div class="container" style="padding:50px 250px;">
+                        <form role="form">
+                            <div class="form-group">
+                              <input type="input" class="form-control input-lg" id="txt-search-origin" placeholder="Search by city, or airport code.">
+                            </div>
+                        </form>
+                        <div id="filter-records"></div>
+                      </div>
                 </div>
                 <div class="row pr-1 py-3 justify-content-end">
                     <label class="pr-1" for="Destination">Destination:</label>
-                    <input class="col-7" type="text" id="Destination" />
+                    <!-- <input class="col-7" type="text" id="Destination" /> -->
+                    <div class="container" style="padding:50px 250px;">
+                        <form role="form">
+                            <div class="form-group">
+                              <input type="input" class="form-control input-lg" id="txt-search-destination" placeholder="Search by city, or airport code.">
+                            </div>
+                        </form>
+                        <div id="filter-records"></div>
+                      </div>
                 </div>
                 <div class="row pr-1 py-3 justify-content-end">
                     <label class="pr-1" for="Date">Travel Date:</label>
@@ -126,5 +142,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<script src="helpers/jsonDataSearch.js"></script>
 
 </html>
