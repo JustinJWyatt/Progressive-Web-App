@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
 </head>
 
 <body>
@@ -36,55 +37,107 @@
             </div>
         </header>
 
-        <div class="content row">
-            <div class="col-12 col-md-4 h5">
-                <div class="row pr-1 py-3 justify-content-end">
-                    <label class="pr-1" for="Country">Country:</label>
+        <div class="content row mt-2">
+            <div class="col-12 col-md-4 pr-3 pl-0">
+                <div class="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="CountrySelector">Country</label>
+                        </div>
+                        <select class="custom-select" id="CountrySelector">
+                          <option disabled selected>Choose...</option>
+                          <option value="CAN">Canada</option>
+                          <option value="MEX">Mexico</option>
+                          <option value="USA">United States</option>
+                        </select>
+                      </div>
+                    <!-- <label class="pr-1" for="Country">Country:</label>
                     <select class="col-7" name="Country" id="Country">
                         <option value="USA">United States</option>
-                    </select>
+                    </select> -->
                 </div>
-                <div class="row pr-1 py-3 justify-content-end">
-                    <label class="pr-1" for="Currency">Currency:</label>
+                <div class="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="CurrencySelector">Currency</label>
+                        </div>
+                        <select class="custom-select" id="CurrencySelector">
+                          <option disabled selected>Choose...</option>
+                          <option value="USD">USD($)</option>
+                          <option value="STB">SCHRUTEBUCKS($)</option>
+                        </select>
+                      </div>
+                    <!-- <label class="pr-1" for="Currency">Currency:</label>
                     <select class="col-7" name="Currency" id="Currency">
                         <option value="USD">USD($)</option>
                         <option value="USD">SCHRUTEBUCKS($)</option>
-                    </select>
+                    </select> -->
                 </div>
-                <div class="row pr-1 py-3 justify-content-end">
-                    <label class="pr-1" for="Locale">Time Zone:</label>
+                <div class="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="TimeZoneSelector">Time Zone</label>
+                        </div>
+                        <select class="custom-select" id="TimeZoneSelector">
+                          <option disabled selected>Choose...</option>
+                          <option value="CST">CST</option>
+                          <option value="PST">PST</option>
+                          <option value="GMT">GMT</option>
+                          <option value="EST">EST</option>
+                        </select>
+                      </div>
+                    <!-- <label class="pr-1" for="Locale">Time Zone:</label>
                     <select class="col-7" name="Locale" id="Locale">
                         <option value="CST">CST</option>
                         <option value="PST">PST</option>
                         <option value="GMT">GMT</option>
                         <option value="EST">EST</option>
-                    </select>
+                    </select> -->
                 </div>
-                <div class="row pr-1 py-3 justify-content-end">
-                    <label class="pr-1" for="Origin">Origin:</label>
+                <div class="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Origin</span>
+                        </div>
+                        <input id="Origin" type="text" class="form-control custom-select" placeholder="" aria-label="Origin" aria-describedby="basic-addon1">
+                        <div class="OriginLocations" style="position: relative; display:none">
+                            <div class="card" id="filter-records-origin" style="position:absolute; width: 18rem; z-index: 999999;" ></div>
+                        </div>
+                    </div>
+
+                    <!-- <label class="pr-1" for="Origin">Origin:</label>
                     <input class="col-7" type="text" id="Origin" />
                     <div class="container" style="padding:50px 250px;">
                         <div id="filter-records"></div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="row pr-1 py-3 justify-content-end">
-                    <label class="pr-1" for="Destination">Destination:</label>
+                <div class="">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Destination</span>
+                        </div>
+                        <input id="Destination" type="text" class="form-control custom-select" placeholder="" aria-label="Destination" aria-describedby="basic-addon1">
+                        <div class="DestinationLocations" style="position: relative; display:none">
+                            <div class="card" id="filter-records-destination" style="position:absolute; width: 18rem; z-index: 999999;" ></div>
+                        </div>
+                    </div>
+                    <!-- <label class="pr-1" for="Destination">Destination:</label>
                     <input class="col-7" type="text" id="Destination" />
                     <div class="container" style="padding:50px 250px;">
                         <div id="filter-records"></div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="row pr-1 py-3 justify-content-end">
+                <div class="">
                     <label class="pr-1" for="Date">Travel Date:</label>
                     <input class="col-7" type="date" id="Date" />
                 </div>
-                <div class="row pr-1 py-3 justify-content-end">
+                <div class="">
                     <button type="button" class="btn btn-lg btn-warning col-6">Find Flights</button>
                 </div>
             </div>
 
             <div class="main col-12 col-md-8">
-                <ul class="flights-list list-group mt-1" id="flights-list">
+                <ul class="flights-list list-group" id="flights-list">
                     <li class="flight-listing list-group-item d-flex justify-content-between align-items-center row">
                         <div class="departure-data col-5">Departure</div>
                         <div class="arrival-data col-5">
@@ -166,5 +219,4 @@
 <script src="main.js"></script>
 <script src="assets/data/airports.js"></script>
 <script src="helpers/jsonDataSearch.js"></script>
-
 </html>
