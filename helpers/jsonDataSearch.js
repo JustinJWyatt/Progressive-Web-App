@@ -6,7 +6,7 @@ document.getElementById('Destination').addEventListener("keyup", function (e) {
         return;
     }
     let regex = new RegExp(searchField, "i");
-    let output = '<ul class="list-group list-group-flush">';
+    let output = '<ul class="list-group list-group-flush" id="DestinationList">';
     let count = 1;
     console.log(regex)
     $.each(airportData, function(key, val){
@@ -20,7 +20,7 @@ document.getElementById('Destination').addEventListener("keyup", function (e) {
       output += '</ul>';
       document.querySelector('.DestinationLocations').style.display = 'block';
       $('#filter-records-destination').html(output);
-
+      DestinationHighlights();
 });
 
 document.getElementById('Origin').addEventListener("keyup", function (e) {
@@ -31,7 +31,7 @@ document.getElementById('Origin').addEventListener("keyup", function (e) {
         return;
     }
     let regex = new RegExp(searchField, "i");
-    let output = '<ul class="list-group list-group-flush">';
+    let output = '<ul class="list-group list-group-flush" id="OriginList">';
     let count = 1;
     console.log(regex)
     $.each(airportData, function(key, val){
@@ -45,7 +45,50 @@ document.getElementById('Origin').addEventListener("keyup", function (e) {
       output += '</ul>';
       document.querySelector('.OriginLocations').style.display = 'block';
       $('#filter-records-origin').html(output);
+      OriginHighlights();
 });
+
+function OriginHighlights () {
+  let Origin = document.getElementById("OriginList");
+
+  Origin.addEventListener("mouseover", function(e){
+    e.target.style.background = "#ffc107";
+  });
+
+  Origin.addEventListener("mouseout", function(e){
+    e.target.style.background = "white";
+  });
+
+  Origin.addEventListener("click", function(e){
+    document.getElementById("Origin").value = e.target.innerHTML;
+    document.querySelector('.OriginLocations').style.display = 'none';
+  });
+}
+
+function DestinationHighlights () {
+  let Destination = document.getElementById("DestinationList");
+
+  Destination.addEventListener("mouseover", function(e){
+    e.target.style.background = "#ffc107";
+  });
+
+  Destination.addEventListener("mouseout", function(e){
+    e.target.style.background = "white";
+  });
+
+  Destination.addEventListener("click", function(e){
+    document.getElementById("Destination").value = e.target.innerHTML;
+    document.querySelector('.DestinationLocations').style.display = 'none';
+  });
+}
+
+// document.getElementById('Origin').addEventListener("blur", function(){
+//     document.querySelector('.OriginLocations').style.display = 'none';
+// });
+
+// document.getElementById('Destination').addEventListener("blur", function(){
+//   document.querySelector('.DestinationLocations').style.display = 'none';
+// });
 
 
 
