@@ -43,6 +43,10 @@ footer {
 
 }
 
+.card {
+  position: absolute;
+}
+
 /* :root {
   --number: 0.17216;
   --content-width: 100vw;

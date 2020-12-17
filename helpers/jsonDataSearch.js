@@ -1,55 +1,95 @@
 document.getElementById('Destination').addEventListener("keyup", function (e) {
     let searchField = this.value;
     if (searchField === '') {
-        document.getElementById('filter-records').innerHTML = '';
+        document.getElementById('filter-records-destination').innerHTML = '';
+        document.querySelector('.DestinationLocations').style.display = 'none';
         return;
     }
     let regex = new RegExp(searchField, "i");
-    let output = '<div class="row">';
+    let output = '<ul class="list-group list-group-flush" id="DestinationList">';
     let count = 1;
     console.log(regex)
     $.each(airportData, function(key, val){
         if ((val.city.search(regex) != -1) || (val.code.search(regex) != -1)) {
-          output += '<div class="col-md-6 well">';
-          output += '<div class="col-md-7">';
-          output += '<p>' + val.code + " - " + val.name +  '</p>'
-          output += '</div>';
-          output += '</div>';
+          output += '<li class="list-group-item">' + val.code + " - " + val.name +  '</li>'
           if(count%2 == 0){
-            output += '</div><div class="row">'
           }
           count++;
         }
       });
-      output += '</div>';
-      $('#filter-records').html(output);
-
+      output += '</ul>';
+      document.querySelector('.DestinationLocations').style.display = 'block';
+      $('#filter-records-destination').html(output);
+      DestinationHighlights();
 });
+
 document.getElementById('Origin').addEventListener("keyup", function (e) {
     let searchField = this.value;
     if (searchField === '') {
-        document.getElementById('filter-records').innerHTML = '';
+        document.getElementById('filter-records-origin').innerHTML = '';
+        document.querySelector('.OriginLocations').style.display = 'none';
         return;
     }
     let regex = new RegExp(searchField, "i");
-    let output = '<div class="row">';
+    let output = '<ul class="list-group list-group-flush" id="OriginList">';
     let count = 1;
     console.log(regex)
     $.each(airportData, function(key, val){
         if ((val.city.search(regex) != -1) || (val.code.search(regex) != -1)) {
-          output += '<div class="col-md-6 well">';
-          output += '<div class="col-md-7">';
-          output += '<p>' + val.code + " - " + val.name +  '</p>'
-          output += '</div>';
-          output += '</div>';
+          output += '<li class="list-group-item">' + val.code + " - " + val.name +  '</li>'
           if(count%2 == 0){
-            output += '</div><div class="row">'
           }
           count++;
         }
       });
-      output += '</div>';
-      $('#filter-records').html(output);
+      output += '</ul>';
+      document.querySelector('.OriginLocations').style.display = 'block';
+      $('#filter-records-origin').html(output);
+      OriginHighlights();
 });
+
+function OriginHighlights () {
+  let Origin = document.getElementById("OriginList");
+
+  Origin.addEventListener("mouseover", function(e){
+    e.target.style.background = "#ffc107";
+  });
+
+  Origin.addEventListener("mouseout", function(e){
+    e.target.style.background = "white";
+  });
+
+  Origin.addEventListener("click", function(e){
+    document.getElementById("Origin").value = e.target.innerHTML;
+    document.querySelector('.OriginLocations').style.display = 'none';
+  });
+}
+
+function DestinationHighlights () {
+  let Destination = document.getElementById("DestinationList");
+
+  Destination.addEventListener("mouseover", function(e){
+    e.target.style.background = "#ffc107";
+  });
+
+  Destination.addEventListener("mouseout", function(e){
+    e.target.style.background = "white";
+  });
+
+  Destination.addEventListener("click", function(e){
+    document.getElementById("Destination").value = e.target.innerHTML;
+    document.querySelector('.DestinationLocations').style.display = 'none';
+  });
+}
+
+// document.getElementById('Origin').addEventListener("blur", function(){
+//     document.querySelector('.OriginLocations').style.display = 'none';
+// });
+
+// document.getElementById('Destination').addEventListener("blur", function(){
+//   document.querySelector('.DestinationLocations').style.display = 'none';
+// });
+
+
 
 //Find more infor and source code @ https://www.js-tutorials.com/jquery-tutorials/live-search-json-objects-data-using-jquery/
